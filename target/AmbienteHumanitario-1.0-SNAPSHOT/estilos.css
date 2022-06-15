@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #a8f2a488;
+    font-family: 'Patrick Hand', cursive;
+}
+.container-logo{
+    display: flex;
+    width: 50vw;
+    height: 30vh;
+    margin: 0 auto;
+}
+.container-logo img{
+    width: 35%;
+    margin: 0 auto;
+}
+/*
+---------------------- MENU NAV - BAR -------------------------------------
+*/
+
+.menu{
+    width: 90vmin;
+    margin: 0 auto;
+}
+header{
+    background-color: #239894b6;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+}
+
+nav{
+    float: right;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 25px;
+    padding: 15px 0;
+    float: left;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #006666;
+    font-weight: bold;
+    font-size: 19px;
+}
+nav ul li a::before{
+    display: block;
+    content: '';
+    width: 0%;
+    background-color: blue;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    transition: width 0.2s;
+}
+nav ul li a:hover::before{
+    width: 100%;
+} 
+
+/*
+---------------------- SLIDE -------------------------------------
+*/
+
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc( 300px + 3em);
+}
+
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.slide-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.slide-control.prev {
+    left: 2%;
+}
+
+.slide-control.next {
+    right: 2%;
+}
+
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo {
+    color: #428bca;
+}
+
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+         -1px 0px 2px rgba(255, 255, 255, 0);
+}
+ /*
+---------------------------------SECTION 1 -------------------------------------------
+ */
+
+.container-section1{
+    padding: 100px;
+    width: 100%;
+    height: 450px;
+    background-image: url(img/gatito.jpg);
+}
+.container-texto h1{
+    text-align: center;
+    color: aliceblue;
+}
+.container-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: right;
+}
+.btn-dona{
+    text-align: center;
+}
+ .container-texto h1{
+     padding: 8px 4px;
+     width: 600px;
+     height: 200px;
+     float: right;
+ }
+ .container-texto button{
+    padding: 8px 4px;
+    width: 150px;
+    margin: 5px;
+
+ }
+  /*
+---------------------------------SECTION 2 -------------------------------------------
+ */
+.container-section2{
+    padding: 100px;
+    width: 100%;
+    height: 450px;
+    background-image: url(img/Labrador\ Puppy.jpg);
+    background-size: 100%;
+}
+.container-texto2{
+    width: 450px;
+}
+.container-texto2 h1{
+
+    text-align: center;
+    color: aliceblue;
+}
+
+.container-texto2 h2{
+    text-align: center;
+    color: aliceblue;
+}
+.container-texto2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+}
+.container-texto2 button{
+    padding: 8px 4px;
+    width: 150px;
+}
+.btn-dona2{
+    text-align: center;
+}
+ /*
+---------------------------------SECTION 2 -------------------------------------------
+ */
+
+ .container-section3{
+    padding: 100px 20px;
+    width: 100%;
+    height: 450px;
+    background-image: url(img/beautiful-pet-portrait-of-dog.jpg);
+    background-size: 100%;
+}
+.container-texto3 h1{
+    text-align: center;
+    color: black;
+}
+.container-texto3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: right;
+}
+.btn-dona3{
+    text-align: center;
+}
+ .container-texto3 h1{
+     padding: 2px;
+     width: 600px;
+     height: 200px;
+     float: right;
+ }
+ .container-texto3 button{
+    padding: 8px 4px;
+    width: 150px;
+    margin: 5px;
+
+ }
